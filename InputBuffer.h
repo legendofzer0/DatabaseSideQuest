@@ -1,3 +1,5 @@
+#include <stddef.h>
+#include <sys/types.h>
 
 #ifndef INPUTBUFFERHEADER_H
 #define INPUTBUFFERHEADER_H
