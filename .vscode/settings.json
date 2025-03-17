@@ -3,6 +3,8 @@
         "*.sqlbook": "sql",
         "*.ndjson": "jsonl",
         "*.dbclient-js": "javascript",
-        "printprompt.h": "c"
-    }
+        "printprompt.h": "c",
+        "statement.h": "c"
+    },
+    "C_Cpp.errorSquiggles": "disabled"
 }
