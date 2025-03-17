@@ -1,13 +1,16 @@
 #include "InputBuffer.h"
 #include "Statement.h"
 #include <string.h>
+#include<stdio.h>
 
 
 typedef enum { PREPARE_SUCCESS, PREPARE_UNRECOGNIZED_STATEMENT, PREPARE_SYNTAX_ERROR } PrepareResult;
 
 PrepareResult prepare_statement(InputBuffer* input_buffer,
     Statement* statement) {
-if (strncmp(input_buffer->buffer, "insert", 6) == 0) {
+        if (strncmp(input_buffer->buffer, "insert", 6) == 0) {
+            printf("%s", input_buffer->buffer);
+
 statement->type = STATEMENT_INSERT;
 int args_assigned= scanf(
     input_buffer->buffer,"insert %d %s %s",&(statement->row_to_insert.id),

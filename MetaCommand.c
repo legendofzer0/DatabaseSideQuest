@@ -1,4 +1,5 @@
 #include "InputBuffer.h"
+#include <string.h>
 
 typedef enum {
     META_COMMAND_SUCCESS,
@@ -11,7 +12,8 @@ MetaCommandResult do_meta_command(InputBuffer* inputBuffer){
     if (strcmp(inputBuffer->buffer, ".exit") == 0) {
         void close_input_buffer(inputBuffer);
         printf("Exit Successful");
-      } else {
+      }
+      else {
         return META_COMMAND_UNRECOGNIZED_COMMAND;
       }
 }
